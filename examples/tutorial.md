@@ -1,162 +1,168 @@
 ---
-font: cn-sans
+font: system
 ---
 
-# MD2Slides 入门
+# Getting Started with MD2Slides
 
-先写普通 Markdown，再按需要加一行 layout 指令，就能预览成一页页 slides。
+Write ordinary Markdown first. Add one-line layout directives only when a slide needs a different structure.
 
-## 最小写法
+## Minimal Syntax
 
-一个标题，加上一段正文，就是一张清楚的页面。
+A heading plus a paragraph is enough to make a clear slide.
 
 ```md
-# 我的主题
+# My Topic
 
-这里写这一页要讲的内容。
+Write what this slide needs to say.
 ```
 
-## 自动分页
+## Automatic Slide Breaks
 
-`#` 和 `##` 会自动开启新的 slide。
+`#` and `##` headings automatically start new slides.
 
-- `#` 适合整份文档的标题
-- `##` 适合每一页的标题
-- 写作时先按内容分段，不需要先想布局
+- Use `#` for the deck title or major sections.
+- Use `##` for normal slide titles.
+- Organize content first; layout can come later.
 
-## 页内小标题
+## In-Slide Headings
 
-### 这一行不会新开一页
+### This Line Does Not Start a New Slide
 
-`###` 会留在当前 slide 里，适合放页内的小节标题。
+`###` stays inside the current slide, so it works well for small sections within one slide.
 
-继续写正文时，内容仍然属于这一页。
+The following paragraph still belongs to this slide.
 
-## 列表和步骤
+## Lists and Steps
 
-用列表整理要点，用数字写操作顺序。
+Use bullet lists for points and numbered lists for procedures.
 
-- 先写主题
-- 再补充例子
-- 最后预览效果
+- Start with the main idea.
+- Add supporting examples.
+- Preview the result.
 
-1. 打开 Markdown 文件
-2. 保存修改
-3. 切到浏览器查看 slides
+1. Open the Markdown file.
+2. Save your changes.
+3. Check the slides in the browser.
 
-## 引用和重点
+## Quotes and Emphasis
 
-引用适合放一句想让观众记住的话。
+Quotes are useful for sentences that should stand out.
 
-> 先把内容写清楚，页面效果会自然跟上。
+> Clear content makes slide design easier.
 
-普通段落可以继续放在引用之后。
+Regular paragraphs can continue after a quote.
 
-## 表格
+## Tables
 
-表格适合做小型对比。
+Tables work well for compact comparisons.
 
-| Markdown | Slide 效果 |
+| Markdown | Slide Result |
 | --- | --- |
-| `# 标题` | 新建一页 |
-| `## 标题` | 新建一页 |
-| `### 标题` | 当前页小标题 |
+| `# Title` | Starts a new slide |
+| `## Title` | Starts a new slide |
+| `### Title` | Adds an in-slide heading |
 
-## 代码块
+## Code Blocks
 
-代码块会按原样排版，适合展示命令、配置或示例。
+Code blocks keep their original formatting, which makes them useful for commands, configuration, and examples.
 
 ```powershell
 npm run dev -- examples/tutorial.md
 ```
 
 ```js
-const title = "普通 Markdown";
+const title = "Plain Markdown";
 console.log(title);
 ```
 
-## 图片
+## Images
 
-普通 Markdown 图片会直接显示在 slide 中。
+Standard Markdown images render directly in slides.
 
-![示例图](media/pattern.svg)
+![Example visual](media/pattern.svg)
 
-图片路径相对当前 Markdown 文件所在目录。
+Image paths are resolved relative to the current Markdown file.
 
-## Layout 样例
+## Layout Examples
 
-前面的页面都使用默认 layout。
+The previous slides used the default layout.
 
-需要改变版式时，在当前页标题下面加一行注释指令：
+To change the structure, add a comment directive below the slide heading:
 
 ```md
 <!-- slide: layout=image-right -->
 ```
 
-下面几页会直接预览不同 layout 的效果。
+The next slides demonstrate several layouts directly.
 
-## Cover 封面页
-<!-- slide: layout=cover title="Cover<br>封面页" -->
+## Cover Slide
 
-适合课程开场、章节切换或重要主题登场。
+<!-- slide: layout=cover title="Cover<br>Slide" -->
 
-## Image Right 图文页
+Good for course openings, chapter breaks, and major topic changes.
+
+## Image Right
+
 <!-- slide: layout=image-right -->
 
-![示例图](media/pattern.svg)
+![Example visual](media/pattern.svg)
 
-- 图片放在右侧
-- 文字放在左侧
-- 适合讲截图、流程和案例
+- Image on the right
+- Text on the left
+- Useful for screenshots, workflows, and case studies
 
-## Two Columns 双栏
+## Two Columns
+
 <!-- slide: layout=two-col -->
 
-**左侧：问题**
+**Left: Problem**
 
-- 内容太散
-- 顺序不清楚
-- 重点不明显
+- Scattered content
+- Unclear order
+- Hidden emphasis
 
 ---
 
-**右侧：做法**
+**Right: Approach**
 
-- 拆成两栏
-- 左右对照
-- 一页讲清一组关系
+- Split related ideas
+- Compare side by side
+- Explain one relationship per slide
 
-## Quote 大字句
+## Quote Layout
+
 <!-- slide: layout=quote class=accent -->
 
-> 好的 slide 先让观众看懂，再让他们记住。
+> A good slide helps the audience understand first, then remember.
 
-## Compare 对比表
+## Compare Layout
+
 <!-- slide: layout=compare -->
 
-| 场景 | 默认写法 | 推荐 layout |
+| Scenario | Basic Markdown | Recommended Layout |
 | --- | --- | --- |
-| 普通说明 | 标题 + 段落 | default |
-| 截图讲解 | 图片 + 要点 | image-right |
-| 前后对比 | 表格 | compare |
+| Explanation | Title + paragraph | `default` |
+| Screenshot walkthrough | Image + bullets | `image-right` |
+| Before and after | Table | `compare` |
 
-## Full 整页媒体
+## Full Media
+
 <!-- slide: layout=full -->
 
-![示例图](media/pattern.svg)
+![Example visual](media/pattern.svg)
 
-## 预览方式
+## Preview Workflow
 
-写的时候启动实时预览：
+Start live preview while writing:
 
 ```powershell
 npm run dev -- examples/tutorial.md
 ```
 
-完成后构建静态文件：
+Build static files when the deck is ready:
 
 ```powershell
 npm run build -- examples/tutorial.md
 ```
 
-这样就可以把 Markdown 变成可演示、可离线打开的 HTML slides。
+Now the Markdown file is a presentable, offline-friendly HTML slide deck.

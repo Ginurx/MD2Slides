@@ -1,5 +1,5 @@
 ---
-font: system
+font: cn-sans
 ---
 
 # Default

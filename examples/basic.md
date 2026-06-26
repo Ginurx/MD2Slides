@@ -1,37 +1,37 @@
 ---
-font: cn-sans
+font: system
 fontFamily: ""
 ---
 
 # MD2Slides
 
-把 Markdown 直接变成可以演示、离线打开、打印成 PDF 的 HTML slides。
+Turn Markdown into HTML slides that can be presented, opened offline, and printed to PDF.
 
-- `#` 和 `##` 会开启新页面
-- `###` 会留在当前页面里
-- 支持图片、视频、表格、引用和代码块
+- `#` and `##` start new slides
+- `###` stays inside the current slide
+- Images, videos, tables, quotes, and code blocks are supported
 
-## 写作方式
+## Authoring Style
 
-### 当前页内的小标题
+### A Small Heading Inside the Current Slide
 
-> 保持 Markdown 易读，同时用少量注释指令控制演示布局。
+> Keep Markdown readable, then use a few comment directives when a slide needs layout control.
 
 ```md
 <!-- slide: break layout=quote -->
-一句适合单独放大的话。
+One sentence that deserves its own slide.
 ```
 
-## 图文页
+## Text and Image
 
 <!-- slide: layout=image-right -->
 
-![示例图](media/pattern.svg)
+![Example visual](media/pattern.svg)
 
-- 图片或视频会自动进入媒体区域
-- 文本留在另一侧
-- 适合讲案例、流程和截图
+- Media is placed in the visual area
+- Text stays on the opposite side
+- Useful for cases, workflows, and screenshots
 
-<!-- slide: break layout=quote title="保持简单" -->
+<!-- slide: break layout=quote title="Keep It Simple" -->
 
-先写内容，再用指令微调页面。
+Write the content first. Tune the slide layout only where it helps the audience.
