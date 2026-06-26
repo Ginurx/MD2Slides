@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-*/
+releases/
+playwright-report/
+test-results/
+docs/layout-previews/
+
+# Vite cache
+.vite/
+
+# Logs and local environment
+*.log
+.env
+.env.*
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

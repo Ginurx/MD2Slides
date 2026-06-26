@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-label="Fixture pattern">
+  <rect width="1280" height="720" fill="#eef5f4"/>
+  <rect x="80" y="90" width="480" height="260" rx="16" fill="#fffaf0" stroke="#d8d1c3" stroke-width="4"/>
+  <rect x="648" y="126" width="450" height="86" rx="12" fill="#176f8f"/>
+  <rect x="648" y="256" width="340" height="86" rx="12" fill="#d8442e"/>
+  <path d="M230 505h780" stroke="#1d2329" stroke-width="20" stroke-linecap="round" opacity=".45"/>
+</svg>

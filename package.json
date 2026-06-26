@@ -1,0 +1,24 @@
+{
+  "name": "md2slides-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "md2slides": "./bin/md2slides.js"
+  },
+  "scripts": {
+    "dev": "node ./bin/md2slides.js dev",
+    "build": "node ./bin/md2slides.js build",
+    "preview": "node ./bin/md2slides.js preview",
+    "docs:previews": "node ./scripts/captureLayoutPreviews.js",
+    "release:zip": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/package-source.ps1",
+    "test": "node --test test/unit/*.test.js && playwright test"
+  },
+  "dependencies": {
+    "markdown-it": "^14.1.0",
+    "vite": "^8.0.16"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.57.0"
+  }
+}
