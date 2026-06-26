@@ -1,40 +1,21 @@
 # MD2Slides
 
-MD2Slides 是一个本地 Markdown 转 HTML slides 的工作区工具。它把 Markdown 在 Vite 构建或预览时解析成 16:9 的 slide deck，最终产物是静态文件，可以离线打开、发布到网页，或用浏览器打印成 PDF。
+> 把一个普通的 Markdown 文件变成精致、可离线使用的 16:9 网页 slides——不需要任何幻灯片编辑器。
 
-这个项目适合把不同主题的 Markdown 讲稿快速换成可演示的网页 slides。
+MD2Slides 是一个本地 Markdown 转 HTML slides 的工具。你只用普通 Markdown 写作，它会在 Vite `dev` / `preview` / `build` 时把文件解析成干净的 16:9 slide deck，在浏览器里渲染。构建产物是完全静态的文件——可以离线打开、发布到任意网页主机，或直接用浏览器打印成 PDF。
+
+它专为把讲稿、教程和技术笔记快速变成可演示的网页 slides 而设计：既有恰到好处的排版控制让画面显得用心，又没有传统幻灯片软件的繁琐负担。
 
 ## 特性
 
-- **纯 Markdown 写作**：`#` / `##` 自动分页，HTML 注释手动分页。
-- **多种内置布局**：default、cover、image-left/right、image-full、full、two-col、media、quote、compare。
-- **三种主题与四种字号**：light / dark / accent、normal / large / xl / hero。
-- **内容自适应**：`fit=shrink` 自动缩放，`fit=scroll` 滚动浏览。
-- **本地素材智能复制**：只复制 Markdown 实际引用的本地图片/视频，保持相对路径。
-- **浏览器即播放器**：键盘翻页、Overview 模式、全屏、页码跳转、字体面板。
-- **URL 深链**：`#slide-3` 可直接定位到第 3 页。
-- **静态输出**：构建产物可离线使用，也支持浏览器打印导出 PDF。
-
----
-
-## 目录
-
-- [快速开始](#快速开始)
-  - [CLI 参数](#cli-参数)
-- [演示控制](#演示控制)
-- [Markdown 规则](#markdown-规则)
-  - [自动分页](#自动分页)
-  - [手动分页](#手动分页)
-  - [文档级配置（Frontmatter）](#文档级配置frontmatter)
-- [Slide 指令](#slide-指令)
-- [布局预览](#布局预览)
-- [主题、适配和字号](#主题适配和字号)
-- [字体](#字体)
-- [素材规则](#素材规则)
-- [构建、预览和 PDF](#构建预览和-pdf)
-- [文档预览图](#文档预览图)
-- [测试](#测试)
-- [目录结构](#目录结构)
+- **纯 Markdown 写作**——`#` / `##` 自动分页；需要时再用 HTML 注释指令控制布局、主题和手动分页。
+- **十种内置布局**——`default`、`cover`、`image-left`、`image-right`、`image-full`、`full`、`two-col`、`media`、`quote`、`compare`，从章节封面到左右对比一应俱全。
+- **主题与字号**——三种主题（`light` / `dark` / `accent`）加四档字号（`normal` / `large` / `xl` / `hero`），逐页设定基调与重点。
+- **内容总是放得下**——`fit=shrink` 在溢出时自动缩放，`fit=scroll` 让长表格和参考内容可滚动浏览。
+- **本地素材智能复制**——只复制 deck 实际引用的本地图片/视频，并保持相对路径。
+- **浏览器即播放器**——键盘翻页、Overview 模式、全屏、页码跳转，以及实时主题与字体面板。
+- **可分享的深链**——`#slide-3` 直接定位到第 3 页，`?theme=dark` 这类设置也能随 URL 携带。
+- **静态、可移植的产物**——构建结果可在任意环境离线运行，也能通过浏览器打印干净导出 PDF。
 
 ---
 

@@ -1,38 +1,21 @@
 # MD2Slides
 
-MD2Slides is a local Markdown-to-HTML slide workspace. It turns a Markdown file into a 16:9 slide deck during Vite preview or build, then outputs static files that can be opened offline, published to the web, or printed to PDF from a browser.
+> Turn a plain Markdown file into a polished, offline-ready 16:9 slide deck — no slide editor required.
 
-It is designed for quickly turning Markdown lectures, tutorials, and technical notes into presentable web slides.
+MD2Slides is a local Markdown-to-HTML slide tool. You write in ordinary Markdown; it parses your file during Vite `dev`, `preview`, or `build` and renders a clean 16:9 deck in the browser. The build output is fully static — open it offline, publish it to any web host, or print it to PDF straight from your browser.
+
+It's built for quickly turning lectures, tutorials, and technical notes into presentable web slides, with just enough layout control to look intentional and none of the overhead of a slide app.
 
 ## Features
 
-- **Plain Markdown authoring**: `#` and `##` start new slides, while HTML comments provide optional layout control.
-- **Built-in layouts**: `default`, `cover`, `image-left`, `image-right`, `image-full`, `full`, `two-col`, `media`, `quote`, and `compare`.
-- **Themes and type scales**: `light`, `dark`, `accent`, plus `normal`, `large`, `xl`, and `hero` content sizes.
-- **Overflow handling**: `fit=shrink` scales content down; `fit=scroll` keeps dense material scrollable.
-- **Local asset copying**: only local images and videos referenced by the Markdown deck are copied into the build output.
-- **Browser playback**: keyboard navigation, overview mode, fullscreen, slide number jump, theme switching, and font controls.
-- **Deep links**: `#slide-3` opens the third slide directly.
-- **Static output**: build artifacts work offline and can be printed to PDF.
-
----
-
-## Contents
-
-- [Quick Start](#quick-start)
-- [CLI Options](#cli-options)
-- [Presentation Controls](#presentation-controls)
-- [Markdown Rules](#markdown-rules)
-- [Slide Directives](#slide-directives)
-- [Layout Gallery](#layout-gallery)
-- [Themes, Fitting, and Sizes](#themes-fitting-and-sizes)
-- [Fonts](#fonts)
-- [Asset Rules](#asset-rules)
-- [Build, Preview, and PDF](#build-preview-and-pdf)
-- [Layout Preview Images](#layout-preview-images)
-- [Tests](#tests)
-- [Project Structure](#project-structure)
-- [Source Release Package](#source-release-package)
+- **Write in plain Markdown** — `#` and `##` start new slides automatically; HTML-comment directives add optional layout, theme, and break control when you want it.
+- **Ten built-in layouts** — `default`, `cover`, `image-left`, `image-right`, `image-full`, `full`, `two-col`, `media`, `quote`, and `compare` cover everything from section dividers to side-by-side comparisons.
+- **Themes and type scales** — three themes (`light`, `dark`, `accent`) and four content sizes (`normal`, `large`, `xl`, `hero`) to set tone and emphasis per slide.
+- **Content that always fits** — `fit=shrink` scales overflowing slides down, while `fit=scroll` keeps dense tables and reference material scrollable.
+- **Smart asset copying** — only the local images and videos your deck actually references get copied into the build, with relative paths preserved.
+- **The browser is the player** — keyboard navigation, overview mode, fullscreen, jump-to-slide, plus live theme and font panels.
+- **Shareable deep links** — `#slide-3` opens the third slide directly, and settings like `?theme=dark` ride along in the URL.
+- **Static, portable output** — build artifacts run offline anywhere and export cleanly to PDF via browser print.
 
 ---
 
